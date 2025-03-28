@@ -8,4 +8,5 @@ class Assets {
   static final String capsuleImg = "assets/medicine/cap.png";
   static final String creamImg = "assets/medicine/cream.png";
   static final String liquidImg = "assets/medicine/liquid.png";
+  static final String userImg = "assets/medicine/user.png";
 }

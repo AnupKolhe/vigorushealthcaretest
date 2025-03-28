@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
       darkTheme: theme.dark(),
       theme: theme.light(),
       initialRoute:
-          PathString.homeScreen, // initialRoute: AppString.loginScreen,
+          PathString.loginScreen, // initialRoute: AppString.loginScreen,
       routes: {
         PathString.loginScreen: (context) => LoginScreen(),
         PathString.signupScreen: (context) => SignUp(),

@@ -1,17 +1,19 @@
 import 'dart:ui';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class AddMedicineModel {
-  String? medinamce;
-  int? compartmentNum;
-  int? colorIndex;
-  Color? selectedColor;
-  String? medicinceType;
-  String? medicinceQuantity;
-  DateTime? startDate;
-  DateTime? endDate;
-  String? frequency;
-  String? timesDay;
-  Set<String>? foodTime;
+  final String? medinamce;
+  final int? compartmentNum;
+  final int? colorIndex;
+  final Color? selectedColor;
+  final String? medicinceType;
+  final String? medicinceQuantity;
+  final DateTime? startDate;
+  final DateTime? endDate;
+  final String? frequency;
+  final String? timesDay;
+  final List<String>? foodTime;
 
   // Constructor
   AddMedicineModel({
@@ -25,7 +27,7 @@ class AddMedicineModel {
     this.endDate,
     this.frequency,
     this.timesDay,
-    this.foodTime,
+    required this.foodTime,
   });
 
   // From JSON
@@ -34,17 +36,20 @@ class AddMedicineModel {
       medinamce: json['medinamce'],
       compartmentNum: json['compartmentNum'],
       colorIndex: json['colorIndex'],
-      selectedColor: json['selectedColor'] != null
-          ? Color(int.parse(
-              json['selectedColor'])) // Assuming color is stored as int
-          : null,
+      // selectedColor: json['selectedColor'] != null
+      //     ? Color(int.parse(
+      //         json['selectedColor'])) // Assuming color is stored as int
+      //     : null,
       medicinceType: json['medicinceType'],
       medicinceQuantity: json['medicinceQuantity'],
-      startDate: json['startDate'],
-      endDate: json['endDate'],
+      startDate: (json['startDate'] as Timestamp?)?.toDate() ?? DateTime.now(),
+      endDate: (json['endDate'] as Timestamp?)?.toDate() ?? DateTime.now(),
       frequency: json['frequency'],
       timesDay: json['timesDay'],
-      foodTime: json['foodTime'],
+      foodTime: (json['foodTime'] as List<dynamic>?)
+              ?.map((e) => e.toString())
+              .toList() ??
+          [],
     );
   }
 

@@ -62,9 +62,9 @@ class AuthService {
 
     try {
       await _firestore
-          .collection(PathString.homeScreen)
-          .doc(user.uid)
           .collection(FirebaseString.usersCollection)
+          .doc(user.uid)
+          .collection(FirebaseString.medicineCollection)
           .add(medicineJson.toJson());
     } catch (e) {
       rethrow;

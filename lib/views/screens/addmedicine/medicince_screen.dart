@@ -4,6 +4,7 @@ import 'package:vigorushealthcaretest/model/medicine/add_medicine_model.dart';
 
 import '../../../common/constant/app_string.dart';
 import '../../../common/constant/color_string.dart';
+import '../../../common/constant/path_string.dart';
 import '../../../common/services/auth_service.dart';
 
 class MedicinceScreen extends StatefulWidget {
@@ -32,7 +33,7 @@ class _MedicinceScreenState extends State<MedicinceScreen> {
   AuthService authService = AuthService();
   String quantityValue = '';
 
-  void addMedicince() {
+  Future<void> addMedicince() async {
     String medicinceName = medicince.text;
 
     if (medicinceName.isEmpty) {
@@ -50,8 +51,19 @@ class _MedicinceScreenState extends State<MedicinceScreen> {
         startDate: startDate,
         endDate: endDate,
         frequency: frequency,
-        foodTime: selectedOptions);
-    authService.uploadMedicalReport(addMedicineModel);
+        foodTime: selectedOptions.toList());
+
+    try {
+      await authService.uploadMedicalReport(addMedicineModel);
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Medicine added successfully!')),
+      );
+      Navigator.pushNamed(context, PathString.homeScreen);
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Failed to add medicine: $e')),
+      );
+    }
   }
 
   @override
