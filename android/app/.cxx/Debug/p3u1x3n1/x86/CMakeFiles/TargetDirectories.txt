@@ -1,0 +1,2 @@
+/Users/anupsureshkolhe/Desktop/Coding/github/test/vigorushealthcaretest/android/app/.cxx/Debug/p3u1x3n1/x86/CMakeFiles/edit_cache.dir
+/Users/anupsureshkolhe/Desktop/Coding/github/test/vigorushealthcaretest/android/app/.cxx/Debug/p3u1x3n1/x86/CMakeFiles/rebuild_cache.dir

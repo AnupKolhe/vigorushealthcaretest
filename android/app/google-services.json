@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "321413938644",
+    "project_id": "testpune",
+    "storage_bucket": "testpune.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:321413938644:android:2fd1c78c03e9a09206ea41",
+        "android_client_info": {
+          "package_name": "com.example.vigorushealthcaretest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpaniWR5pkPkcys5aSeMEwhnbOod8cpZ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

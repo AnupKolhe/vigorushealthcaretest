@@ -1,0 +1,74 @@
+lib/
+│── main.dart
+│── app.dart
+│── config/
+│   │── theme.dart
+│   │── constants.dart
+│── core/
+│   │── network/
+│   │   │── api_service.dart
+│   │   │── dio_client.dart
+│   │── utils/
+│   │   │── validators.dart
+│── data/
+│   │── models/
+│   │   │── user_model.dart
+│   │   │── medicine_model.dart
+│   │── repositories/
+│   │   │── auth_repository.dart
+│   │   │── medicine_repository.dart
+│   │   │── report_repository.dart
+│── logic/
+│   │── blocs/
+│   │   │── auth/
+│   │   │   │── auth_bloc.dart
+│   │   │   │── auth_event.dart
+│   │   │   │── auth_state.dart
+│   │   │── home/
+│   │   │   │── home_bloc.dart
+│   │   │   │── home_event.dart
+│   │   │   │── home_state.dart
+│   │   │── medicine/
+│   │   │   │── medicine_bloc.dart
+│   │   │   │── medicine_event.dart
+│   │   │   │── medicine_state.dart
+│   │   │── report/
+│   │   │   │── report_bloc.dart
+│   │   │   │── report_event.dart
+│   │   │   │── report_state.dart
+│   │   │── connectivity/
+│   │   │   │── connectivity_bloc.dart
+│   │   │   │── connectivity_event.dart
+│   │   │   │── connectivity_state.dart
+│── presentation/
+│   │── screens/
+│   │   │── auth/
+│   │   │   │── login_screen.dart
+│   │   │   │── signup_screen.dart
+│   │   │── home/
+│   │   │   │── home_screen.dart
+│   │   │── no_connection/
+│   │   │   │── no_connection_screen.dart
+│   │   │── medicine/
+│   │   │   │── add_medicine_screen.dart
+│   │   │── report/
+│   │   │   │── report_screen.dart
+│   │   │── profile/
+│   │   │   │── profile_screen.dart
+│   │── widgets/
+│   │   │── custom_button.dart
+│   │   │── custom_textfield.dart
+│   │   │── medicine_card.dart
+│   │   │── color_picker.dart
+│   │   │── compartment_picker.dart
+│   │   │── frequency_picker.dart
+│   │   │── quantity_selector.dart
+│   │   │── date_picker.dart
+│── assets/
+│   │── images/
+│   │   │── login_bg.png
+│   │   │── no_connection.png
+│   │   │── add_medicine.png
+│   │── fonts/
+│   │── lottie/
+│── pubspec.yaml
